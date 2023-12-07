@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 17:00:15 by zait-bel          #+#    #+#             */
-/*   Updated: 2023/12/06 21:01:04 by zait-bel         ###   ########.fr       */
+/*   Updated: 2023/12/07 10:18:24 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,15 @@ int	ft_printf(const char *str, ...)
 	va_start(arg, str);
 	while (str[i])
 	{
-		if ((str[i]) == '%' && str[i + 1])
+		if ((str[i]) == '%')
 		{
-			count += ft_conv(str[i + 1], arg);
-			i++;
+			if (str[i + 1])
+			{
+				count += ft_conv(str[i + 1], arg);
+				i++;
+			}
 		}
-		else if (str[i + 1])
+		else
 			count += ft_putchar(str[i]);
 		i++;
 	}
