@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:32:20 by zait-bel          #+#    #+#             */
-/*   Updated: 2023/12/06 15:21:47 by zait-bel         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:04:01 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_put_int_nbr(int n)
 		count += ft_putchar('-');
 		nbr = -nbr;
 	}
-	if (nbr >= 0 && nbr <= 9)
+	if (nbr <= 9)
 		count += ft_putchar(nbr + 48);
 	else
 	{
